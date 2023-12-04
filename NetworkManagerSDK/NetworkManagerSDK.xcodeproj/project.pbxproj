@@ -11,6 +11,10 @@
 		B67026FB2B168801001B36E1 /* NetworkManagerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67026F02B168801001B36E1 /* NetworkManagerSDK.framework */; };
 		B67027002B168801001B36E1 /* NetworkManagerSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67026FF2B168801001B36E1 /* NetworkManagerSDKTests.swift */; };
 		B67027012B168801001B36E1 /* NetworkManagerSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B67026F32B168801001B36E1 /* NetworkManagerSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B670270D2B1AA7FD001B36E1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670270C2B1AA7FD001B36E1 /* Network.swift */; };
+		B670270F2B1AA8CE001B36E1 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B670270E2B1AA8CE001B36E1 /* NetworkModel.swift */; };
+		B67027122B1AABB4001B36E1 /* StructsObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67027112B1AABB4001B36E1 /* StructsObjects.swift */; };
+		B67027142B1AB499001B36E1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67027132B1AB499001B36E1 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		B67026F42B168801001B36E1 /* NetworkManagerSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkManagerSDK.docc; sourceTree = "<group>"; };
 		B67026FA2B168801001B36E1 /* NetworkManagerSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67026FF2B168801001B36E1 /* NetworkManagerSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerSDKTests.swift; sourceTree = "<group>"; };
+		B670270C2B1AA7FD001B36E1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Network.swift; path = ../../../Network.swift; sourceTree = "<group>"; };
+		B670270E2B1AA8CE001B36E1 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkModel.swift; path = ../../../NetworkModel.swift; sourceTree = "<group>"; };
+		B67027112B1AABB4001B36E1 /* StructsObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StructsObjects.swift; path = ../../../StructsObjects.swift; sourceTree = "<group>"; };
+		B67027132B1AB499001B36E1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = ../../../WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,9 @@
 		B67026F22B168801001B36E1 /* NetworkManagerSDK */ = {
 			isa = PBXGroup;
 			children = (
+				B67027102B1AAB8A001B36E1 /* StructsObjects */,
+				B670270B2B1AA74F001B36E1 /* Services */,
+				B670270A2B1AA721001B36E1 /* Models */,
 				B67026F32B168801001B36E1 /* NetworkManagerSDK.h */,
 				B67026F42B168801001B36E1 /* NetworkManagerSDK.docc */,
 			);
@@ -83,6 +94,31 @@
 				B67026FF2B168801001B36E1 /* NetworkManagerSDKTests.swift */,
 			);
 			path = NetworkManagerSDKTests;
+			sourceTree = "<group>";
+		};
+		B670270A2B1AA721001B36E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B670270E2B1AA8CE001B36E1 /* NetworkModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B670270B2B1AA74F001B36E1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B670270C2B1AA7FD001B36E1 /* Network.swift */,
+				B67027132B1AB499001B36E1 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B67027102B1AAB8A001B36E1 /* StructsObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B67027112B1AABB4001B36E1 /* StructsObjects.swift */,
+			);
+			path = StructsObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B670270F2B1AA8CE001B36E1 /* NetworkModel.swift in Sources */,
+				B67027142B1AB499001B36E1 /* WebService.swift in Sources */,
+				B67027122B1AABB4001B36E1 /* StructsObjects.swift in Sources */,
+				B670270D2B1AA7FD001B36E1 /* Network.swift in Sources */,
 				B67026F52B168801001B36E1 /* NetworkManagerSDK.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +385,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -354,7 +394,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
@@ -382,7 +422,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -391,7 +431,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
@@ -409,11 +449,12 @@
 		B67027082B168801001B36E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.citi.NetworkManagerSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,11 +469,12 @@
 		B67027092B168801001B36E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.citi.NetworkManagerSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
