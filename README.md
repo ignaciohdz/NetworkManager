@@ -1,23 +1,23 @@
 # NetworkManager
 SDK para llamada a servicios
 
-:::::::::::::::::::::::::::::::: Ejemplo de Implementación ::::::::::::::::::::::::::::::::
-1) Clonar el repositorio en una nueva carpeta llamada "NetworkManagerSDK" dentro del path del proyecto a implementar
+:::::::::::::::::::::::::::::::: **Ejemplo de Implementación** ::::::::::::::::::::::::::::::::
+**1)** Clonar el repositorio en una nueva carpeta llamada "NetworkManagerSDK" dentro del path del proyecto a implementar
 
-2) Modificar Podfile de su proyecto con las siguiente línea
-      pod 'NetworkManagerSDK', :path => 'NetworkManagerSDK'
+**2)** Modificar Podfile de su proyecto con las siguiente línea
+      _pod 'NetworkManagerSDK', :path => 'NetworkManagerSDK'_
       
-3) Instalar los pods en su proyecto
+**3)** Instalar los pods en su proyecto
 
-4) Para hacer las peticiones en el Model, seguir el siguiente ejemplo:
+**4)** Para hacer las peticiones en el Model, seguir el siguiente ejemplo:
 
-//Import del framework
+_//Import del framework_
 import NetworkManagerSDK
 
-//Instancia de la clase WebService
+_//Instancia de la clase WebService_
 var ws : WebService = WebService()
 
-//Consumir funciones con peticiones a servicios
+_//Consumir funciones con peticiones a servicios_
 self.ws.getCharacters { response, error in
     if let _ = error {
         print("ERROR: \(error!.errorMessage) - (\(error!.error))")
@@ -26,7 +26,7 @@ self.ws.getCharacters { response, error in
     }
 }
         
-//(Opcional) Implementación de notificación estatus de servicio
+_//(Opcional) Implementación de notificación estatus de servicio_
 self.ws.callbackServices = { response in
     if response.status == statusService.start{
         print("Mostrar Loader...")
@@ -35,6 +35,6 @@ self.ws.callbackServices = { response in
     }
 }
 
-:::: Author: Ignacio Hernandez Montes ::::::::::::::::::::::::::::::::::::::::::::::::::
+:::: **Author: Ignacio Hernandez Montes** ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
