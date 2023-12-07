@@ -10,6 +10,8 @@
 		B67026F52B168801001B36E1 /* NetworkManagerSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = B67026F42B168801001B36E1 /* NetworkManagerSDK.docc */; };
 		B67026FB2B168801001B36E1 /* NetworkManagerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67026F02B168801001B36E1 /* NetworkManagerSDK.framework */; };
 		B67027012B168801001B36E1 /* NetworkManagerSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B67026F32B168801001B36E1 /* NetworkManagerSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B67027BD2B225417001B36E1 /* EnumsGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67027BC2B225417001B36E1 /* EnumsGeneric.swift */; };
+		B67027C02B22542C001B36E1 /* NameServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67027BF2B22542C001B36E1 /* NameServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		B67027A62B1E6602001B36E1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B67027A72B1E6605001B36E1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		B67027A92B1E667C001B36E1 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		B67027BC2B225417001B36E1 /* EnumsGeneric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumsGeneric.swift; sourceTree = "<group>"; };
+		B67027BF2B22542C001B36E1 /* NameServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +76,10 @@
 		B67026F22B168801001B36E1 /* NetworkManagerSDK */ = {
 			isa = PBXGroup;
 			children = (
+				B67027BB2B225417001B36E1 /* Enums */,
 				B67027A42B1E6599001B36E1 /* Models */,
 				B67027A32B1E658F001B36E1 /* Services */,
+				B67027BE2B22542C001B36E1 /* Strings */,
 				B67027A22B1E6579001B36E1 /* StructsObjects */,
 				B67026F32B168801001B36E1 /* NetworkManagerSDK.h */,
 				B67026F42B168801001B36E1 /* NetworkManagerSDK.docc */,
@@ -104,6 +110,22 @@
 				B67027A92B1E667C001B36E1 /* NetworkModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B67027BB2B225417001B36E1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B67027BC2B225417001B36E1 /* EnumsGeneric.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B67027BE2B22542C001B36E1 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				B67027BF2B22542C001B36E1 /* NameServices.swift */,
+			);
+			path = Strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67027C02B22542C001B36E1 /* NameServices.swift in Sources */,
+				B67027BD2B225417001B36E1 /* EnumsGeneric.swift in Sources */,
 				B67026F52B168801001B36E1 /* NetworkManagerSDK.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +453,7 @@
 		B67027082B168801001B36E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -448,6 +473,7 @@
 		B67027092B168801001B36E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
